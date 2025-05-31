@@ -1,11 +1,25 @@
 <html>
 <head>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Mi Lista de Tareas</h1>
-  <ul id="task-list"></ul>
+  <div class="container">
+    <h1>Mi Lista de Tareas</h1>
+
+     <div class="formulario">
+      <input type="text" id="nueva-tarea" placeholder="Escribe una tarea...">
+      <button onclick="agregarTarea()">Agregar</button>
+    </div>
+
+    <!-- Lista de tareas -->
+    <ul id="lista-tareas">
+      <!-- Aquí se mostrarán las tareas -->
+    </ul>
+  </div>
+
+  <!-- Script futuro -->
+  <!-- <script src="app.js"></script> -->
 </body>
 </html>

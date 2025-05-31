@@ -1,5 +1,38 @@
 body {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+ul#lista-tareas {
+  list-style: none;
+  padding: 0;
+}
+
+ul#lista-tareas li {
   background: #f0f0f0;
-  padding: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
 }
