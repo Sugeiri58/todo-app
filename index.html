@@ -1,11 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  
+  <meta charset="UTF-8">
   <title>To-Do App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Mi Lista de Tareas</h1>
-  <ul id="task-list"></ul>
+
+  <!-- Campo para agregar tareas -->
+  <input type="text" id="new-task" placeholder="Escribe una nueva tarea">
+  <button onclick="addTask()">Agregar</button>
+
+  <!-- Lista de tareas -->
+  <ul id="task-list">
+    <!-- Las tareas se agregarán aquí -->
+  </ul>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
