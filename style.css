@@ -5,18 +5,17 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   min-height: 100vh;
 }
 
-.container {
+.contenedor {
   background: #fff;
   padding: 2rem;
-  margin-top: 3rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
+  margin-top: 2rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   max-width: 500px;
+  width: 100%;
 }
 
 h1 {
@@ -25,14 +24,38 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-ul#lista-tareas {
+#lista-tareas,
+#task-list {
   list-style: none;
   padding: 0;
 }
 
-ul#lista-tareas li {
+#lista-tareas li,
+#task-list li {
   background: #f0f0f0;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
 }
+
+/* Tareas completadas */
+.task.completed,
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Botones generales */
+button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Botones de filtro */
+#filter-controls button,
+#controles-de-filtro button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
