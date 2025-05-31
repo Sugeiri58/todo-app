@@ -1,13 +1,31 @@
+
 body {
   font-family: Arial, sans-serif;
 }
 
-#task-list li {
+/* Estilo para la lista */
+#lista-de-tareas li {
   margin: 5px 0;
   list-style: none;
 }
 
+/* Tareas completadas */
+.task.completed,
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Botones generales */
 button {
   margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Botones de filtro */
+#filter-controls button,
+#controles-de-filtro button {
+  margin: 5px;
+  padding: 8px 12px;
   cursor: pointer;
 }

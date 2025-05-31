@@ -1,23 +1,39 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>To-Do App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo App - Mark Complete</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Mi Lista de Tareas</h1>
+    <h1>Todo App</h1>
 
-  <!-- Campo para agregar tareas -->
-  <input type="text" id="new-task" placeholder="Escribe una nueva tarea">
-  <button onclick="addTask()">Agregar</button>
+    <ul id="todo-list">
+      <li class="task">
+      Estudiar Git
+      <button class="mark-complete-btn">Marcar como completada</button>
+      </li>
+      <li class="task completed">
+        Hacer la tarea
+        <button class="mark-complete-btn">Marcar como completada</button>
+      </li>
+     </ul>
 
-  <!-- Lista de tareas -->
-  <ul id="task-list">
-    <!-- Las tareas se agregarán aquí -->
-  </ul>
-
-  <!-- Script -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+=======
+<div id="filter-controls">
+    <button onclick="filterTasks('all')">Todas</button>
+    <button onclick="filterTasks('completed')">Completadas</button>
+    <button onclick="filterTasks('pending')">Pendientes</button>
+  </div>
+  
+  <ul id="todo-list">
+    <li class="task completed">Estudiar Git</li>
+    <li class="task">Hacer la tarea</li>
+  </ul>
+  

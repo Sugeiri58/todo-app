@@ -1,27 +1,39 @@
-// Obtener referencias a los elementos
-const taskList = document.getElementById('task-list');
-const newTaskInput = document.getElementById('new-task');
 
-// Agregar una nueva tarea
-function addTask() {
-  const taskText = newTaskInput.value.trim();
-  if (taskText !== '') {
-    // Crear elemento li
-    const li = document.createElement('li');
-    li.textContent = taskText;
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.mark-complete-btn');
 
-    // Botón de eliminar
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Eliminar';
-    deleteBtn.onclick = function() {
-      taskList.removeChild(li);
-    };
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const taskItem = button.parentElement;
+      const taskText = taskItem.querySelector('span');
 
-    // Agregar el botón al li y luego li a la lista
-    li.appendChild(deleteBtn);
-    taskList.appendChild(li);
+      // Alternar clase "completed"
+      taskText.classList.toggle('completed');
 
-    // Limpiar campo
-    newTaskInput.value = '';
-  }
+      // Cambiar texto del botón según estado
+      if (taskText.classList.contains('completed')) {
+        button.textContent = 'Desmarcar';
+      } else {
+        button.textContent = 'Marcar como completada';
+      }
+    });
+  });
+});
+
+function filterTasks(filter) {
+  const tasks = document.querySelectorAll('.task');
+
+  tasks.forEach((task) => {
+    const isCompleted = task.classList.contains('completed');
+
+    if (filter === 'all') {
+      task.style.display = 'list-item';
+    } else if (filter === 'completed' && isCompleted) {
+      task.style.display = 'list-item';
+    } else if (filter === 'pending' && !isCompleted) {
+      task.style.display = 'list-item';
+    } else {
+      task.style.display = 'none';
+    }
+  });
 }
