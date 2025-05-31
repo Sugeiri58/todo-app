@@ -1,11 +1,11 @@
-<html>
-<head>
+<div id="filter-controls">
+    <button onclick="filterTasks('all')">Todas</button>
+    <button onclick="filterTasks('completed')">Completadas</button>
+    <button onclick="filterTasks('pending')">Pendientes</button>
+  </div>
   
-  <title>To-Do App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Mi Lista de Tareas</h1>
-  <ul id="task-list"></ul>
-</body>
-</html>
+  <ul id="todo-list">
+    <li class="task completed">Estudiar Git</li>
+    <li class="task">Hacer la tarea</li>
+  </ul>
+  

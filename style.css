@@ -1,5 +1,11 @@
-body {
-  font-family: sans-serif;
-  background: #f0f0f0;
-  padding: 20px;
-}
+#filter-controls button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .task.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
