@@ -1,11 +1,17 @@
+.task.completed,
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Estilo general para botones */
+button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
 #filter-controls button {
-    margin: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
-  }
-  
-  .task.completed {
-    text-decoration: line-through;
-    color: gray;
-  }
-  
+  margin: 5px;
+  padding: 8px 12px;
+}
+

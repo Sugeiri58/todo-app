@@ -1,19 +1,38 @@
-<script>
-  function filterTasks(filter) {
-    const tasks = document.querySelectorAll('.task');
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.mark-complete-btn');
 
-    tasks.forEach(task => {
-      const isCompleted = task.classList.contains('completed');
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const taskItem = button.parentElement;
+      const taskText = taskItem.querySelector('span');
 
-      if (filter === 'all') {
-        task.style.display = 'list-item';
-      } else if (filter === 'completed' && isCompleted) {
-        task.style.display = 'list-item';
-      } else if (filter === 'pending' && !isCompleted) {
-        task.style.display = 'list-item';
+      // Alternar clase "completed"
+      taskText.classList.toggle('completed');
+
+      // Cambiar texto del botón según estado
+      if (taskText.classList.contains('completed')) {
+        button.textContent = 'Desmarcar';
       } else {
-        task.style.display = 'none';
+        button.textContent = 'Marcar como completada';
       }
     });
-  }
-</script>
+  });
+});
+
+function filterTasks(filter) {
+  const tasks = document.querySelectorAll('.task');
+
+  tasks.forEach((task) => {
+    const isCompleted = task.classList.contains('completed');
+
+    if (filter === 'all') {
+      task.style.display = 'list-item';
+    } else if (filter === 'completed' && isCompleted) {
+      task.style.display = 'list-item';
+    } else if (filter === 'pending' && !isCompleted) {
+      task.style.display = 'list-item';
+    } else {
+      task.style.display = 'none';
+    }
+  });
+}
