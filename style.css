@@ -1,5 +1,13 @@
 body {
-  font-family: sans-serif;
-  background: #f0f0f0;
-  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+#task-list li {
+  margin: 5px 0;
+  list-style: none;
+}
+
+button {
+  margin-left: 10px;
+  cursor: pointer;
 }
