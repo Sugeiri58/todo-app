@@ -1,54 +1,66 @@
 /* Estilo general del cuerpo */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
   margin: 0;
   padding: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #333;
 }
 
 /* Título principal */
 h1 {
   text-align: center;
-  color: #222;
-  margin-bottom: 20px;
-  font-size: 2.5rem;
+  color: #4b4b4b;
+  margin-bottom: 25px;
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 /* Formulario de nueva tarea */
 .formulario {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 input[type="text"] {
-  padding: 10px;
+  padding: 12px 16px;
   font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  width: 240px;
+  width: 260px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.4);
+  outline: none;
 }
 
 /* Botón general */
 button {
-  background-color: #5b42f3;
+  background-color: #6c63ff;
   color: #fff;
   border: none;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #4834d4;
+  background-color: #4e47d2;
+  transform: translateY(-2px);
 }
 
 /* Controles de filtro */
@@ -56,8 +68,20 @@ button:hover {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 18px;
   flex-wrap: wrap;
+}
+
+#filter-controls button {
+  background-color: #e0e0e0;
+  color: #4b4b4b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#filter-controls button.active {
+  background-color: #6c63ff;
+  color: #fff;
 }
 
 /* Lista de tareas */
@@ -65,7 +89,7 @@ button:hover {
   list-style: none;
   padding: 0;
   width: 100%;
-  max-width: 700px;
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -75,27 +99,49 @@ button:hover {
 .task {
   background: #fff;
   padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .task span {
   font-size: 1.1rem;
   margin-bottom: 8px;
   flex-grow: 1;
+  word-break: break-word;
 }
 
 .task.completed span {
   text-decoration: line-through;
-  color: gray;
+  color: #aaa;
 }
 
 /* Grupo de botones dentro de cada tarea */
 .task button {
-  margin-left: 10px;
+  margin-left: 8px;
   margin-top: 5px;
+  background-color: #ff4b5c;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+}
+
+.task button:hover {
+  background-color: #e63946;
+}
+
+.task button.edit {
+  background-color: #00b894;
+}
+
+.task button.edit:hover {
+  background-color: #019875;
 }
