@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicación Todo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Mi Lista de Tareas</h1>
+
+  <!-- Formulario para añadir tareas -->
+  <div class="formulario">
+    <input type="text" id="nueva-tarea" placeholder="Escribe una tarea..." />
+    <button onclick="agregarTarea()">Agregar</button>
+  </div>
+
+  <!-- Controles para filtrar -->
+  <div id="filter-controls">
+    <button onclick="filterTasks('all')">Todas</button>
+    <button onclick="filterTasks('completed')">Completadas</button>
+    <button onclick="filterTasks('pending')">Pendientes</button>
+  </div>
+
+  <!-- Lista de tareas -->
+  <ul id="task-list">
+    <li class="task">
+      <span>Estudiar Git</span>
+      <button class="mark-complete-btn">Marcar como completada</button>
+      <button class="delete-btn">Eliminar</button>
+    </li>
+    <li class="task completed">
+      <span>Hacer la tarea</span>
+      <button class="mark-complete-btn">Desmarcar</button>
+      <button class="delete-btn">Eliminar</button>
+    </li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
